@@ -1,0 +1,35 @@
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/blue_txt</color>
+    <color name="translate">#00000000</color>
+
+    <color name="black">#000</color>
+    <color name="black_05">#05000000</color>
+    <color name="white">#FFF</color>
+    <color name="app_bg">#eef1f6</color>
+
+    <color name="binder_txt">#545454</color>
+    <color name="orange_txt">#faaf2c</color>
+    <color name="add_card">#27347D</color>
+    <color name="huan_text_color">#333333</color>
+    <color name="eef1f6">#eef1f6</color>
+    <color name="line_color">#d3d3d3</color>
+    <color name="gray_acacac">#acacac</color>
+    <color name="due_fb7c3e">#fb7c3e</color>
+    <color name="btn_shape_color">#f1d430</color>
+
+
+    <color name="blue_txt">#1baeff</color>
+    <color name="main_discount_coupon_title">#585858</color>
+    <color name="main_discount_coupon_time">#A2A2A2</color>
+    <color name="main_discount_coupon_button">#1BAEFF</color>
+    <color name="main_discount_coupon_background">#7f000000</color>
+
+    <color name="captcha_fault">#FC7558</color>
+    <color name="main_loan_list">#585858</color>
+    <color name="popup_outline">#AAAAAA</color>
+    <color name="popup_inner">#79C784</color>
+    <color name="popup_line">#CCCCCC</color>
+    <color name="update_version">#1BAEFF</color>
+</resources>

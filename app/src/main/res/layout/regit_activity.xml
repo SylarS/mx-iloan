@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:id="@+id/tv_input_vetify_note"
+        style="@style/introducir_959595"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_title"
+        android:layout_marginTop="19dp"
+        android:text="@string/input_area_code" />
+
+    <RelativeLayout
+        android:id="@+id/rl_input_pw"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_input_vetify_note"
+        android:layout_marginLeft="@dimen/row_margin_lef_rigt"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="@dimen/row_margin_lef_rigt"
+        android:background="@drawable/et_login_code_bg">
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingLeft="14dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/edit_input_phone_num"
+            style="@style/introducir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_area"
+            android:maxLength="11"
+            android:background="@null"
+            android:paddingLeft="2dp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_input_pw"
+        style="@style/introducir_959595"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_input_pw"
+        android:layout_marginTop="16dp"
+        android:text="@string/input_passwd" />
+
+    <EditText
+        android:id="@+id/edit_input_phone_pw"
+        style="@style/introducir"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_input_pw"
+        android:layout_marginLeft="@dimen/row_margin_lef_rigt"
+        android:layout_marginTop="@dimen/row_margin_lef_rigt"
+        android:layout_marginRight="14dp"
+        android:maxLength="16"
+        android:background="@drawable/et_login_code_bg"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tv_input_phone_note"
+        style="@style/introducir_959595"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_input_phone_pw"
+        android:layout_marginTop="16dp"
+        android:text="@string/input_yanma" />
+
+    <RelativeLayout
+        android:id="@+id/rl_vetify"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_input_phone_note"
+        android:layout_marginLeft="@dimen/row_margin_lef_rigt"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="@dimen/row_margin_lef_rigt">
+
+        <EditText
+            android:id="@+id/edit_yanma"
+            style="@style/introducir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="4"
+            android:background="@drawable/et_login_code_bg" />
+
+        <TextView
+            android:id="@+id/tv_get_vertify_code"
+            android:layout_width="73dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/rectangle_grary_circle_4"
+            android:gravity="center"
+            android:text="@string/get_yanma"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_protrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_vetify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:visibility="visible">
+
+        <CheckBox
+            android:id="@+id/cb_check_protrol"
+            style="@style/custime_check_box"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_regit_proctrol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cb_check_protrol"
+            android:text="@string/regit_agree_proctrol"
+            android:textColor="@color/gray_acacac"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_protrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_protrol"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/regit_agree_proctrol1"
+        android:textColor="@color/blue_txt"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btn_regit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_protrol"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/row_margin_lef_rigt"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="@dimen/row_margin_lef_rigt"
+        android:background="@drawable/rectangle_grary_circle_4"
+        android:text="@string/regit"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_into_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_regit"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/gray_acacac"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+      />
+
+</RelativeLayout>

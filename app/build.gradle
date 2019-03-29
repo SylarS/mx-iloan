@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+def rootPath=getRootDir().path
+def appscreteFile = rootProject.file(rootPath+"/appSecret.properties")
+def appscretePropertise = new Properties()
+appscretePropertise.load(new FileInputStream(appscreteFile))
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.2"
+    defaultConfig {
+        applicationId appscretePropertise["applicationId"]
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 109
+        versionName "1.0.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [GETUI_APP_ID    : appscretePropertise["GETUI_APP_ID"],
+                                GETUI_APP_KEY   : appscretePropertise["GETUI_APP_KEY"],
+                                GETUI_APP_SECRET: appscretePropertise["GETUI_APP_SECRET"]]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+
+    }
+    signingConfigs {//debug和replease版本用统一签名
+        config {
+            keyAlias appscretePropertise["keyAlias"]
+            keyPassword appscretePropertise["keyPassword"]
+            storeFile file(rootPath+"/keystore/"+appscretePropertise["storeFile"])
+            storePassword appscretePropertise["storePassword"]
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            //Gradle2.0以上版本minifyEnabled字段为true时已经包含了shrinkResources
+//            shrinkResources true                    //移除无用的resource文件
+            zipAlignEnabled true
+            debuggable false //设为true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false                       //Debug开发版本默认false ,不混淆
+            signingConfig signingConfigs.config
+        }
+    }
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+/*    implementation 'com.android.support:appcompat-v7:28.+'*/
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.android.support:design:28.+'
+    //frecsco
+    implementation 'com.facebook.fresco:fresco:1.5.0'
+    /* compile 'com.facebook.fresco:animated-webp:1.5.0'*/
+    //个推
+    implementation 'com.getui:sdk:2.12.3.0'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+    /*    compile 'com.zhouyou:signseekbar:1.0.1'*/
+    implementation project(path: ':signseekbar')
+    //compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    /*compile('com.facebook.android:facebook-android-sdk:4.28.0') {
+      //  exclude group: 'com.android.support', module: 'support-annotations'
+    }*/
+    /* compile 'com.android.support:support-annotations:26.0.0-alpha1'
+     compile 'com.android.support:design:26.0.0-alpha1'*/
+
+    implementation 'com.appsflyer:af-android-sdk:4+@aar'
+    compile project(path: ':livenesslib')
+    //  compile 'com.android.installreferrer:installreferrer:1.0'
+    implementation 'com.liulishuo.filedownloader:library:1.7.5'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+MobSDK {
+    appKey "283033253a54c"
+    appSecret "7a0fee7e246b3d620eef21ab5c99af50"
+    ShareSDK {
+        devInfo {
+            Facebook {
+                appKey appscretePropertise["fb_appKey"]
+                appSecret appscretePropertise["fb_appSecret"]
+                callbackUri "https://mob.com"
+                shareByAppClient true
+                enable true
+
+            }
+            Twitter {
+                appKey appscretePropertise["tw_appKey"]
+                appSecret appscretePropertise["tw_appSecret"]
+                callbackUri "http://mob.com"
+            }
+            LinkedIn {
+                appKey appscretePropertise["li_appKey"]
+                appSecret appscretePropertise["li_appSecret"]
+                //   callbackUri "http://www.sharesdk.cn"
+                callbackUri "http://mob.com"
+                shareByAppClient true
+                enable true
+            }
+        }
+    }
+}
+appscretePropertise.clear()

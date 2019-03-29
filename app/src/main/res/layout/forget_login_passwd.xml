@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+    <include layout="@layout/include_title"/>
+    <TextView
+        style="@style/send_yanma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
+        android:text="@string/send_code"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/phone_num"
+        style="@style/send_yanma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="1309999999999"
+        android:textSize="15sp" />
+
+    <com.panshi.hujin2.iloan.view.widget.VerificationCodeView
+        android:id="@+id/verificationcodeview"
+        android:layout_width="336dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/et_login_code_bg"
+        app:vcv_et_cursor="@drawable/et_cursor"
+        app:vcv_et_inputType="number"
+        app:vcv_et_number="4"
+        app:vcv_et_text_color="#545454"
+        app:vcv_et_width="75dp" />
+
+    <LinearLayout
+        android:layout_width="336dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_ps1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/edit_ps2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/edit_ps3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/edit_ps4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/foget_contrase_a_de_pago1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/input__new_login_pw" />
+
+    <EditText
+        android:id="@+id/edit_passwd"
+        style="@style/introducir"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="18dp"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:hint="@string/input"
+        android:background="@drawable/set_passwd_shape" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/foget_contrase_a_de_pago1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="22dp"
+        android:text="@string/re_input_new_login_pw" />
+
+    <EditText
+        android:id="@+id/edit_re_passwd"
+        style="@style/introducir"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="18dp"
+        android:hint="@string/input"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:background="@drawable/set_passwd_shape" />
+
+    <Button
+        android:id="@+id/btn_set"
+        style="@style/btn_gray_style"
+        android:layout_width="336dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/set" />
+</LinearLayout>

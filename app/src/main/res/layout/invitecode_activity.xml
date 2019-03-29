@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/include_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="13dp"
+        android:text="@string/invite_code"/>
+    <EditText
+        android:id="@+id/edit_invite_code"
+        android:layout_width="334dp"
+        android:layout_height="46dp"
+        style="@style/introducir"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="14dp"
+        android:hint="@string/input_inivte_6code"
+        android:maxLength="6"
+        android:background="@drawable/inviate_code_shape"/>
+    <Button
+        android:id="@+id/btn_finishi"
+        android:layout_width="334dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="17dp"
+        style="@style/btn_gray_style"
+        android:text="@string/finishi"
+        android:background="@drawable/inviate_code_btn"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+         android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="@string/over_step"
+        />
+
+</LinearLayout>

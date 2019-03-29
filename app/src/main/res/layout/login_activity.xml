@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/translate"
+        app:popupTheme="@style/toolbarMenuStyle" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="311dp"
+        android:layout_height="303dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="179dp"
+        android:background="@drawable/input_passwd_rl_shape">
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="271dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/input_passwd_shape">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/edit_phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_area"
+                android:maxLength="11"
+                android:background="@null"
+                android:hint="@string/input_phone_num"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edit_passwd"
+            android:layout_width="271dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/rl_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/input_passwd_shape"
+            android:paddingLeft="48dp"
+            android:maxLength="16"
+            android:hint="@string/input_passwd"
+            android:inputType="textPassword"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_forget_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_passwd"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="22dp"
+
+            android:text="@string/forget"
+            android:textColor="@color/blue_txt" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="271dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/tv_forget_pw"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/buttun_index_shape"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_regit_proctrol"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login_agree_proctrol"
+            android:layout_below="@+id/btn_login"
+            android:textColor="@color/gray_acacac"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/tv_protrol"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_regit_proctrol"
+            android:layout_alignLeft="@+id/tv_regit_proctrol"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/blue_txt"
+            android:textSize="11sp"
+            android:text="@string/regit_agree_proctrol1"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_regited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_content"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/gray_acacac"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+       />
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/img_title"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="141dp"
+        android:background="@drawable/login_icon" />
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation Drawer -->
+    <dimen name="row_heigt">61dp</dimen>
+    <dimen name="banner_height">184dp</dimen>
+    <dimen name="phone_num_height">15dp</dimen>
+</resources>

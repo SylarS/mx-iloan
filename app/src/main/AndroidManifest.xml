@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.panshi.hujin2.iloan">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+   <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+
+    <!--适配全面屏手机-->
+
+    <!--    <meta-data android:name="android.support.VERSION"
+            android:value="ratio_float"
+            />-->
+    <application
+        android:name="com.panshi.hujin2.iloan.application.AppStaus"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+
+        <!--     <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+             <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+                 android:value="true"/>-->
+        <!-- 数据统计日志输出开关 -->
+        <meta-data
+            android:name="IS_DEBUG"
+            android:value="true" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.0"
+            tools:replace="android:value" />
+        <!--  <activity android:name="com.facebook.FacebookActivity"
+              android:configChanges=
+                  "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+              android:label="@string/app_name" />
+          <activity
+              android:name="com.facebook.CustomTabActivity"
+              android:exported="true">
+              <intent-filter>
+                  <action android:name="android.intent.action.VIEW" />
+                  <category android:name="android.intent.category.DEFAULT" />
+                  <category android:name="android.intent.category.BROWSABLE" />
+                  <data android:scheme="@string/fb_login_protocol_scheme"
+                      tools:ignore="ManifestResource" />
+              </intent-filter>
+          </activity>-->
+
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="283033253a54c" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="7a0fee7e246b3d620eef21ab5c99af50" />
+
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.WebViewBannerActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.PhoneNumActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.panshi.hujin2.loancash.login" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.RegiterActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.SetActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.NewsActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.panshi.hujin2.cashLoan.news" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.ForgetLoginPasswdActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.ForgetPayPasswdActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.LocationNumberActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.UpdateLoginPasswdActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.UpdatePayPasswdActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.SetRegitPasswdActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.InviateCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.LoginLoadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.panshi.hujin2.iloan.view.activity.FaceVetifyResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <service android:name="com.panshi.hujin2.iloan.service.PushIntentService" />
+        <service
+            android:name="com.panshi.hujin2.iloan.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service android:name="com.panshi.hujin2.iloan.service.UpdateNoReadNewsService" />
+        <!-- AppsFlyer 安装receiver -->
+        <receiver
+            android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- Appsflyer配置，需要配置在官网上获取的DEVKEY -->
+        <meta-data
+            android:name="DEVKEY_APPSFLYER"
+            android:value="mjBybJPN4C2dM3s9FUVS4g" />
+        <!--        android:authorities="${applicationId}.fileProvider"-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- &lt;!&ndash;AppsFlyer can track Google Advertising ID to improve tracking, 假如项目需要，需要添加以下配置，详细参考Android AppsFlyer说明文档3.4节 &ndash;&gt;
+         <meta-data android:name="com.google.android.gms.version"
+             android:value="@integer/google_play_services_version" />-->
+
+
+    </application>
+    <!--  <supports-screens android:largeScreens="true"
+
+      android:normalScreens="true" android:anyDensity="true"
+
+      android:smallScreens="true"/>-->
+</manifest>

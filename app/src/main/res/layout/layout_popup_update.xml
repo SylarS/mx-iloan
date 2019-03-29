@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_discount_coupon_background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_popup"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="285dp"
+            android:layout_height="115dp">
+
+            <ImageView
+                android:layout_width="285dp"
+                android:layout_height="115dp"
+                android:src="@drawable/update_banner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/update_version"
+                android:textColor="@color/update_version" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_popup_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="17dp"
+            android:text="Versão recente: 1.1.2"
+            android:textColor="@color/main_loan_list"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_popup_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="23dp"
+            android:text="1. Melhora a estabilidade do sistema   2. Adiciona função de prêmio de
+                convidar amigos"
+            android:textColor="@color/main_loan_list"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="21dp"
+            android:background="@color/popup_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_popup_left"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/main_loan_list"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_popup_right"
+                android:gravity="center"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.panshi.hujin2.iloan.view.widget.ProgressBeautifulView
+                android:id="@+id/pv_one"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

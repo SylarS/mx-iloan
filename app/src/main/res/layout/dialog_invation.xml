@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="286dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="286dp"
+        android:layout_height="250dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            android:layout_width="11dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dialog_cancel" />
+
+        <TextView
+            android:id="@+id/tv_invation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_cancel"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="23dp"
+            android:text="@string/input_invition_code"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.panshi.hujin2.iloan.view.widget.VerificationCodeView
+            android:id="@+id/verify_code"
+            android:layout_width="336dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_invation"
+            android:layout_margin="23dp"
+            android:background="@drawable/et_login_code_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:vcv_et_cursor="@drawable/et_cursor"
+            app:vcv_et_inputType="text"
+            app:vcv_et_number="6"
+            app:vcv_et_text_color="#545454"
+            app:vcv_et_width="75dp" />
+
+        <Button
+            android:id="@+id/finshi"
+            style="@style/btn_gray_style"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/verify_code"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttun_index_blue_shape_4"
+            android:text="@string/finishi" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finshi"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/over_step"
+            android:textColor="#A2A2A2"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

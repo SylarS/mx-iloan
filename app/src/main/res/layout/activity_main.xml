@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.panshi.hujin2.iloan.view.activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_select"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_index"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/index_select" />
+
+            <TextView
+                android:id="@+id/tv_index"
+                style="@style/index_text_blue_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/index"
+                android:textColor="@color/blue_txt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/discovery" />
+
+            <TextView
+                android:id="@+id/tv_active"
+                style="@style/index_text_gray_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/discovery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_my"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/my_unselect" />
+
+            <TextView
+                android:id="@+id/tv_my"
+                style="@style/index_text_gray_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/my" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_discount_coupon_background"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="261dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_main_discountcoupon_dialog">
+
+            <ImageView
+                android:layout_width="299dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:src="@drawable/main_discountcoupon_center" />
+
+            <TextView
+                android:id="@+id/tv_discount_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="45dp"
+                android:gravity="center"
+                android:textColor="@color/main_discount_coupon_title"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/main_discount_coupon_button"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginLeft="46dp"
+                android:layout_marginBottom="96dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/main_discount_coupon_time"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_go"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_main_discountcoupon_button"
+                android:gravity="center"
+                android:text="@string/main_discount_coupon_go"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </FrameLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/inclue_title"
+        layout="@layout/include_title"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/rl_load_bg"
+        android:layout_width="241dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_load_bg"
+        android:layout_below="@+id/inclue_title">
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="108dp"
+            android:background="@drawable/icon" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_load_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_load_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="158dp"
+        android:gravity="center"
+        android:text="@string/load_note"
+        android:textColor="#949494"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="331dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/tv_load_note"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/buttun_index_blue_shape_4"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:text="@string/login"/>
+
+    <Button
+        android:id="@+id/btn_regit"
+        android:layout_width="331dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="@string/regit"
+        android:background="@drawable/buttun_index_blue_shape_4" />
+</RelativeLayout>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+	.img {
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+		background: url(../1.jpg) center/100% 100% no-repeat;
+	}
+
+	/*.img img{
+		width: 100%;
+	}*/
+
+	/*.img{
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+	}
+	.img img{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}*/
+
+	.web_width {
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+	}
+
+	.left {
+		display: inline-block;
+		/*float: left;*/
+		width: 50px;
+		align-items: flex-start;
+		min-height: 10em;
+		background: #66afe9;
+		padding-bottom: 2000px;
+		margin-bottom: -2000px;
+	}
+
+	.right {
+		display: inline-block;
+		/*float: right;*/
+		/*width: 100%;*/
+		flex: 1;
+		/*flex-flow: 1;*/
+		/*direction: right;*/
+		/*margin-left: 50px;*/
+		box-sizing: border-box;
+		height: 20em;
+		background: #f00;
+	}
+
+	.demo {
+		height: 100px;
+		width: 100px;
+		color: red;
+		font-size: 10px;
+
+		/*方案一  currentColor  当前文字颜色*/
+		border: 5px solid;
+		/*width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 50px solid red;*/
+	}
+
+	.dd {
+		width: 100px;
+		height: 100px;
+		position: relative;
+		/*border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 50px solid red;*/
+		border: 1px solid red;
+		background: #fff;
+	}
+
+	.dd::after {
+		position: absolute;
+		content: '';
+		width: 20px;
+		height: 20px;
+		top: 100px;
+		left: 20px;
+		/*border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid blue;*/
+		border: 1px solid blue;
+		transform: rotate(90deg);
+	}
+</style>
+
+<body>
+	<form id="form1" runat="server">
+		<input class="ina" type='file' id="imgInp" accept="image/*" capture="camera" />
+		<div>
+			<img id="blah" src="#" alt="显示您上传的商品图片" />
+		</div>
+	</form>
+	<input type="file" accept="image/*" capture="camera">
+	<p class="dd"></p>
+	<!--<div class="demo">哈喽！你好吗?</div>-->
+	<div class="web_width">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<!--<div class="img"></div>-->
+	<p>You are at coordinate
+		<span id="coord">5</span> on the line.</p>
+	<p>
+		<a href="fasffdfx=6" onclick="go(1); return false;">Advance to 6</a> or
+		<a href="fasffdfx=4" onclick="go(-1); return false;">retreat to 4</a>?
+	</p>
+	<button onclick="add()">添加父节点</button>
+	<script>
+		$('.ina').click(function(){
+			// console.log(111);
+		})
+		$('.ina').change(function(e){
+
+			// readURL(this)
+		})
+
+		var inp = document.getElementById('imgInp')
+		var imgg = document.getElementById('blah')
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				console.log(reader);
+				reader.onload = function (e) {
+					// console.log(e.target.result);
+					// $(imgg).attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+		inp.onchange = function (e) {
+			var file = e.srcElement.files[0];
+			var imgURL = window.URL.createObjectURL(file);
+			console.log(imgURL);
+			// readURL(this);
+		};
+		var demo = [{
+			"children": [{
+				"children": [{
+					"children": [{
+						"children": [{
+							"children": [{
+								"children": [],
+								"index": "111111"
+							}],
+							"index": "11111"
+						}, {
+							"children": [],
+							"index": "11112"
+						}],
+						"index": "1111"
+					}, {
+						"children": [],
+						"index": "1112"
+					}],
+					"index": "111"
+				}, {
+					"children": [{
+						"children": [],
+						"index": "1121"
+					}, {
+						"children": [],
+						"index": "1122"
+					}],
+					"index": "112"
+				}, {
+					"children": [],
+					"index": "113"
+				}],
+				"index": "11"
+			}, {
+				"children": [],
+				"index": "12"
+			}],
+			"index": "1"
+		}];
+		//      console.log("old", demo);
+
+		function add() {
+			init(demo);
+			addNode(demo)
+			console.log("new", demo);
+		}
+
+		function init(item) {
+			for (let i = 0; i < item.length; i++) {
+				item[i]["parent"] = [];
+				item[i]["parent"].push(item[i]["index"]);
+				if (item[i].children.length !== 0) {
+					var oChild = item[i].children;
+					init(oChild);
+				}
+			}
+			//          return item;
+		}
+
+		function addNode(item) {
+			// debugger
+			for (let i = 0; i < item.length; i++) {
+				var parent = item[i]["parent"];
+				if (item[i].children.length !== 0) {
+					var oChild = item[i].children;
+					for (let j = 0; j < oChild.length; j++) {
+						oChild[j]["parent"] = oChild[j]["parent"].concat(parent);
+						if (oChild[j].index === '113') {
+							console.log(oChild[j].parent)
+						}
+					}
+					addNode(oChild);
+				}
+			}
+			//          return item;
+		}
+
+		var currentPage = 5; // prefilled by server！！！！
+		function go(d) {
+			console.log(222)
+			setupPage(currentPage + d);
+			history.pushState(currentPage, document.title, 'fasffdfx=' + currentPage);
+		}
+		window.onpopstate = function (event) {
+			console.log(event)
+			setupPage(event.state);
+		}
+
+		function setupPage(page) {
+			console.log(333)
+			currentPage = page;
+			document.title = 'Line Game - ' + currentPage;
+			document.getElementById('coord').textContent = currentPage;
+			document.links[0].href = 'fasffdfx=' + (currentPage + 1);
+			document.links[0].textContent = 'Advance to ' + (currentPage + 1);
+			document.links[1].href = 'fasffdfx=' + (currentPage - 1);
+			document.links[1].textContent = 'retreat to ' + (currentPage - 1);
+		}
+
+		function add() {
+			var args = Array.prototype.slice(arguments); //这里也用到了闭包的概念对args的存储
+			var fn = function () {
+				var arg_fn = [].prototype.sclice(arguments)
+				//这里是调用fn
+				return add.apply(null, args.concat(arg_fn)) //这里的递归是为了合并参数
+			}
+			fn.valueof = function () {
+				return arg.reduce((a, b) => a + b) //真正的输出是valueof
+			}
+			return fn //这里是返回fn
+		}
+		console.log([3, 54, 1, 5, 6, 1, 23].sort(function (a, b) {
+			return a - b
+		}))
+		// function Timer() {
+		//this.s1 = 0;
+		//this.s2 = 0;
+		//console.log(this)
+		//// 箭头函数
+		//setInterval(() => this.s1++, 1000);
+		//// 普通函数
+		//setInterval(function () {
+		//  this.s2++;
+		//}, 1000);
+		//}
+		//
+		//var timer = new Timer();
+		//
+		//setTimeout(() => console.log('s1: ', timer.s1), 3100);
+		//setTimeout(() => console.log('s2: ', timer.s2), 3100);
+		var a = 11
+
+		function test1() {
+			this.a = 22;
+			console.log(this)
+			let b = function () {
+				console.log(this);
+			};
+			b();
+		}
+		var x = new test1();
+		const someAsyncThing = function () {
+			return new Promise(function (resolve, reject) {
+				// 下面一行会报错，因为x没有声明
+				resolve(x + 2);
+			});
+		};
+	var y ;
+		someAsyncThing().then(function () {
+			return someOtherAsyncThing();
+		}).catch(function (error) {
+			console.log('oh no', error);
+			// 下面一行会报错，因为 y 没有声明
+			y + 2;
+		}).then(function () {
+			console.log('carry on');
+		});
+
+		window.onerror  = function(msg , url ,line , col , error){
+			console.log('---------msg------------')
+			console.log(msg) ; 
+			console.log('------------error-------------')
+			console.log(error) ;
+			console.log('-----------line-------------')
+			console.log(line)
+		}
+		//	window.onpopstate = function(event) {
+		////	 alert("location: " + document.location + ", state: " +   JSON.stringify(event.state));
+		//	};
+		//	history.pushState({page: 1}, "title 1", "?page=1");
+		//	history.pushState({page: 2}, "title 2", "?page=2");
+		//	history.replaceState({page: 2}, "title 2", "?page=2");
+		//	history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
+		//	history.back(); // alerts "location: http://example.com/example.html, state: null
+		//	history.go(1);
+	</script>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/vConsole/3.0.0/vconsole.min.js"></script>
+<script>
+	var vConsole = new VConsole();
+	console.log('VConsole is cool');
+</script>
+
+</html>

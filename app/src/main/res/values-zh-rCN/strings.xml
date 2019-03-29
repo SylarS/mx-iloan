@@ -1,0 +1,466 @@
+<resources>
+     <string name="app_name">iPeso</string>
+<!--    <string name="app_name">MoneyR</string>-->
+<!--    <string name="app_name">yLoan</string>-->
+    <string name="net_timeout">网络连接超时</string>
+
+    <string name="net_connect_failture">网络连接失败</string>
+    <string name="net_exception">网络异常</string>
+    <string name="json_parse">解析失败</string>
+    <string name="net_ssl_error">证书验证失败</string>
+    <string name="unkown_error">未知错误</string>
+    <string name="service_error">服务错误</string>
+    <string name="unauthorised_out">身份验证过期</string>
+    <string name="input_phone_num">请输入手机号</string>
+    <string name="forget">忘记密码</string>
+    <string name="login">登录</string>
+    <string name="get_yanma">获取验证码</string>
+    <string name="regit">注册</string>
+    <string name="next">下一步</string>
+    <string name="login_sucess">登录成功</string>
+    <string name="pw_len_error">请设置6至18位长度含数字和字母的密码</string>
+    <string name="phone_num_error">非法手机号</string>
+    <string name="update_new">已是最新版本</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_sure">确定</string>
+    <string name="update_version_note">版本更新</string>
+    <string name="double_fast">请勿重复点击</string>
+    <string name="passwd_rule">请设置6至18位登录密码</string>
+    <string name="passwd_rule1">包含数字、字母、字符串至少两种</string>
+    <string name="input_passwd">请输入登录密码</string>
+    <!--    <string name="input_old_passwd">请输入旧密码</string>
+        <string name="input_new_passwd">请输入新密码</string>
+        <string name="input_re_new_passwd">请输入再次新密码</string>-->
+    <string name="re_input_passwd">请重新登录输入密码</string>
+    <string name="passwd_empty">密码不能为空</string>
+    <string name="old_new_no_mathine">两次密码不一致</string>
+    <string name="old_new_same">新密码与旧密码不能相同</string>
+    <string name="version">版本</string>
+    <string name="is_news">你已是最新版本</string>
+    <string name="current_version">当前版本%1$s</string>
+    <string name="forget_pay_passwd">忘记支付密码</string>
+    <string name="forget_passwd">忘记登录密码</string>
+    <string name="modify_pay_passwd">修改支付密码</string>
+    <string name="modify_passwd">修改登录密码</string>
+    <string name="update_passwd_sucess">修改成功</string>
+    <string name="quit">退出</string>
+
+
+
+    <string name="bind_alias_success">绑定别名成功</string>
+    <string name="bind_alias_unknown_exception">绑定别名失败，未知异常</string>
+    <string name="bind_alias_error_frequency">绑定别名失败，请求频次超限</string>
+    <string name="bind_alias_error_param_error">绑定别名失败，参数错误</string>
+    <string name="bind_alias_error_request_filter">绑定别名失败，请求被过滤</string>
+    <string name="bind_alias_error_cid_lost">绑定别名失败，未获取到cid</string>
+    <string name="bind_alias_error_connect_lost">绑定别名失败，网络错误</string>
+    <string name="bind_alias_error_alias_invalid">绑定别名失败，别名无效</string>
+    <string name="bind_alias_error_sn_invalid">绑定别名失败，sn无效</string>
+    <string name="unbind_alias">解绑别名</string>
+    <string name="unbind_alias_unknown_exception">取消绑定别名失败，未知异常</string>
+    <string name="unbind_alias_success">取消绑定别名成功</string>
+    <string name="unbind_alias_error_frequency">取消绑定别名失败，请求频次超限</string>
+    <string name="unbind_alias_error_param_error">取消绑定别名失败，参数错误</string>
+    <string name="unbind_alias_error_request_filter">取消绑定别名失败，请求被过滤</string>
+    <string name="unbind_alias_error_cid_lost">取消绑定别名失败，未获取到cid</string>
+    <string name="unbind_alias_error_connect_lost">取消绑定别名失败，网络错误</string>
+    <string name="unbind_alias_error_alias_invalid">取消绑定别名失败，别名无效</string>
+    <string name="unbind_alias_error_sn_invalid">取消绑定别名失败，sn无效</string>
+
+    <string name="add_tag">添加标签</string>
+    <string name="add_tag_unknown_exception">设置标签失败，未知异常</string>
+    <string name="add_tag_success">接口调用成功</string>
+    <string name="add_tag_error_count">接口调用失败, tag数量过大, 最大不能超过200个</string>
+    <string name="add_tag_error_frequency">设置标签失败，频率过快</string>
+    <string name="add_tag_error_null">接口调用失败, tag 为空</string>
+    <string name="add_tag_error_repeat">设置标签失败, 标签重复</string>
+    <string name="add_tag_error_unbind">设置标签失败, 服务未初始化成功</string>
+    <string name="add_tag_error_not_online">还未登陆成功</string>
+    <string name="add_tag_error_black_list">该应用已经在黑名单中,请联系售后支持!</string>
+    <string name="add_tag_error_exceed">已存 tag 超过限制</string>
+    <string name="push_transmission_data">收到一条透传测试消息</string>
+
+    <string name="send_code">已发送短信验证码到号码</string>
+    <string name="char_limt">字数达到限制</string>
+    <string name="input_yanma">请输入验证码</string>
+    <string name="input_pay_passwd">请输入支付密码</string>
+    <string name="input_re_pay_passwd">请再次输入支付密码</string>
+    <string name="set">设置</string>
+    <string name="set_my">设置</string>
+    <string name="vertify_code_empty">验证码不能为空</string>
+    <string name="input_old_login_pw">请输入旧登录密码</string>
+    <string name="input__new_login_pw">请输入新的登录密码</string>
+    <string name="re_input_new_login_pw">请重新输入新的登录密码</string>
+    <string name="input_old_pay_pw">请输入旧支付密码</string>
+    <string name="input__new_pay_pw">请输入新的支付密码</string>
+    <string name="re_input_new_pay_pw">请重新输入新的支付密码</string>
+
+    <string name="set_new_pay_passwd">请设置新的支付密码</string>
+    <string name="re_set_new_pay_passwd">请重新设置新的支付密码</string>
+    <string name="set_new_login_passwd">请设置新的登录密码</string>
+    <string name="re_set_new_login_passwd">请重新设置新的登录密码</string>
+
+    <string name="please_input_yanma">请先输入验证码</string>
+
+    <string name="no_bindcard_setpasswd">当前没有绑卡或设置支付密码</string>
+    <string name="select_file_error">选择图片文件出错</string>
+    <string name="please_upload_card">请上传身份证文件</string>
+    <string name="login_agree_proctrol">登录即同意</string>
+    <string name="date_format">yyyy年MM月dd日</string>
+    <string name="login_loading">正在登录...</string>
+    <string name="data_loading">加载中...</string>
+    <string name="cut_conent">复制到成功</string>
+    <string name="cut_conent_failture">复制内容为空，复制到失败</string>
+
+    <string name="news">消息中心</string>
+    <string name="add_card">新增信用卡</string>
+    <string name="xrefreshview_header_hint_normal">下拉刷新</string>
+    <string name="xrefreshview_header_hint_ready">松开刷新数据</string>
+    <string name="xrefreshview_header_hint_refreshing">正在刷新...</string>
+    <string name="xrefreshview_header_hint_loading">正在加载...</string>
+    <string name="xrefreshview_header_hint_loaded">加载完成</string>
+    <string name="xrefreshview_header_hint_loaded_fail">加载失败</string>
+    <string name="xrefreshview_header_last_time">上次更新时间：</string>
+    <string name="xrefreshview_footer_hint_normal">加载完成</string>
+    <string name="xrefreshview_footer_hint_fail">加载失败，请重试</string>
+    <string name="xrefreshview_footer_hint_complete">已无更多数据</string>
+    <string name="xrefreshview_footer_hint_click">点击加载更多</string>
+    <string name="xrefreshview_footer_hint_release">松开加载更多</string>
+    <string name="xrefreshview_footer_hint_ready">松开载入更多</string>
+    <string name="xrefreshview_never_refresh">从未刷新</string>
+    <string name="xrefreshview_refresh_justnow">刚刚刷新</string>
+    <string name="xrefreshview_refresh_minutes_ago">%1s分钟之前刷新</string>
+    <string name="xrefreshview_refresh_hours_ago">%1s小时之前刷新</string>
+    <string name="xrefreshview_refresh_days_ago">%1s天之前刷新</string>
+    <string name="index">首页</string>
+    <string name="my">我的</string>
+    <string name="index_tilte">iPeso</string>
+    <string name="head_tilte">无忧贷</string>
+    <string name="jie_amout">借款金额</string>
+    <string name="jie_date">借款期限</string>
+    <string name="jie_note">只能是100的倍数</string>
+    <string name="jie_lilv">日利率1.1%(不含增值税)</string>
+    <string name="jie_lilv_year">固定年利率:</string>
+    <string name="jie_lilv_avager">平均年度总成本:</string>
+    <string name="jie_lilv_avager_note">，不含增值税</string>
+    <string name="jiekuan_fast">马上借款</string>
+    <string name="shen_he_time">最快5分钟内通过审核</string>
+    <string name="repyment_tishi_failture">很抱歉，您的借款由银行方放款失败，请核实您的银行账户是否异常。</string>
+    <string name="review_refuse_note">很抱歉，您的借款审核未通过，\n请完善信息</string>
+    <string name="review_refuse_30_note">很抱歉，您的借款审核未通过，\n请30天后重试</string>
+    <string name="reviewing">审核中</string>
+    <string name="repayment_faiture">打款失败</string>
+    <string name="review_refuse">重新提交</string>
+    <string name="return_bank_name">还款银行</string>
+    <string name="return_account">还款账户</string>
+    <string name="return_code">持卡人姓名</string>
+    <string name="return_date">还款日期</string>
+    <string name="due_date_rate">逾期日利率 %s</string> <!--(含增值税)-->
+    <string name="due_day_btn">逾期%1$d天</string>
+    <string name="repay_day_btn">剩余%1$d天还款</string>
+    <string name="withdraw_cash_avail">可提现</string>
+    <string name="jiekuan_lvlu">日利率</string>
+    <string name="withdraw_cash">提现</string>
+    <string name="loan_history">借款历史</string>
+    <string name="ti_e">提额</string>
+    <string name="yao_friend">邀请好友</string>
+    <string name="help_ceneter">帮助中心</string>
+    <string name="sugesst_replay">意见反馈</string>
+    <string name="about_replay">关于还款</string>
+    <string name="about_us">关于我们</string>
+    <string name="quit_back_note">再返回一次退出</string>
+
+    <string name="amout_avail">最高额度(比索)</string>
+    <string name="amout_applay">申请借款额度(比索)</string>
+    <string name="amout_withdraw">可提现额度(比索)</string>
+    <string name="amout_shouxin">授信额度(比索)</string>
+    <string name="payment_amout">借款额度(比索)</string>
+    <string name="amout_repayment">实际应还金额(比索)</string>
+    <string name="due_jie_date_rate">借款日利率%s</string>
+    <string name="days">%d天</string>
+    <string name="loan_days">天</string>
+    <string name="no_history_news">暂无历史消息</string>
+    <string name="repaymenting">放款中</string>
+    <string name="loan_phone_num">尾号 **** %1$d成功借款%2$d(比特)</string>
+    <string name="repayment_date">yyyy/MM/dd</string>
+   <string name="refure_read_contact">拒绝读取通讯率</string>
+   <string name="no_location_permission">您未打开位置权限</string>
+   <string name="no_phone_state_permission">您未打开获取手机信息权限</string>
+   <string name="set_sms_permission">请前往设置打开读取短信权限</string>
+   <string name="input_pay_6_passwd">请输入6位支付密码</string>
+    <string name="agree_regit_protrol">请同意注册协议</string>
+    <string name="back_downding">后台下载中...</string>
+    <string name="regit_agree_proctrol1">el acuerdo de privacidad de %s</string>
+    <string name="regit_agree_proctrol">He leído y aceptado el acuerdo</string>
+    <string name="set_open_gps">Aún no obtener tu localización, por favor, vaya a configuración a abrir el servicio de localización.</string>
+    <string name="facebook_app_id">1964719267159304</string>
+    <string name="fb_login_protocol_scheme">1964719267159304</string>
+<!--   <string name="picture_size">图片过大，非法图片</string>-->
+    <string name="input">输入</string>
+    <string name="return_eletric_account">电子账户</string>
+    <string name="ticket_center">领券中心</string>
+    <string name="share_content">你已成功复制分享内容</string>
+    <string name="my_reward">我的优惠券</string>
+    <string name="discovery">发现</string>
+    <string name="invite_code">邀请码</string>
+    <string name="finishi">完成</string>
+    <string name="over_step">跳过此部</string>
+    <string name="input_inivte_6code">请输入6位邀请码</string>
+    <string name="load_note">随时随地，急你所需</string>
+    <string name="input_invition_code">输入验证码</string>
+    <string name="input_area_code">输入手机号</string>
+    <string name="phone_num_regited">该手机号已注册过</string>
+    <string name="phone_num_no_regited">该手机号未注册</string>
+    <string name="sms_send_sucess">短信验证码发送成功</string>
+    <string name="sms_send_failture">短信验证码发送失败</string>
+
+    <string name="meglive_auth_progress">正在联网授权中...</string>
+    <string name="meglive_auth_failed">联网授权失败！请检查网络或找服务商</string>
+    <string name="meglive_returnbtn">返回首页</string>
+    <string name="meglive_liveness_again">重新验证活体</string>
+    <string name="meglive_reupload">上传图片失败，请重新上传。</string>
+
+    <string name="meglive_camera">请您打开相机权限</string>
+
+    <string name="permission_location">为保证用户账户安全，请前往设置开启位置授权。</string>
+
+    <string name="main_me_bank_account">银行列表</string>
+
+
+   <!-- <string name="empty_str2"> &#160;%s&#160;</string>
+    <string name="empty_str3"> &#160;&#160;%s&#160;</string>-->
+
+   <!-- <string-array name="phone_arry">
+    <item>93,AF,阿富汗</item>
+    <item>355,AL,阿尔巴尼亚</item>
+    <item>213,DZ,阿尔及利亚</item>
+    <item>376,AD,安道尔共和国</item>
+    <item>244,AO,安哥拉</item>
+    &lt;!&ndash;<item>672,AQ,未知</item>&ndash;&gt;
+    <item>54,AR,阿根廷</item>
+    <item>374,AM,亚美尼亚</item>
+    &lt;!&ndash;<item>297,AW,未知</item>&ndash;&gt;
+    <item>61,AU,澳大利亚</item>
+    <item>43,AT,奥地利</item>
+    <item>994,AZ,阿塞拜疆</item>
+    <item>973,BH,巴林</item>
+    <item>880,BD,孟加拉国</item>
+    <item>375,BY,白俄罗斯</item>
+    <item>32,BE,比利时</item>
+    <item>501,BZ,伯利兹</item>
+    <item>229,BJ,贝宁</item>
+    </string-array>-->
+    <string-array name="CountryCodes">
+        <item>93,AF,阿富汗</item>
+        <item>355,AL,阿尔巴尼亚</item>
+        <item>213,DZ,阿尔及利亚</item>
+        <item>376,AD,安道尔共和国</item>
+        <item>244,AO,安哥拉</item>
+        <!--<item>672,AQ,未知</item>-->
+        <item>54,AR,阿根廷</item>
+        <item>374,AM,亚美尼亚</item>
+        <!--<item>297,AW,未知</item>-->
+        <item>61,AU,澳大利亚</item>
+        <item>43,AT,奥地利</item>
+        <item>994,AZ,阿塞拜疆</item>
+        <item>973,BH,巴林</item>
+        <item>880,BD,孟加拉国</item>
+        <item>375,BY,白俄罗斯</item>
+        <item>32,BE,比利时</item>
+        <item>501,BZ,伯利兹</item>
+        <item>229,BJ,贝宁</item>
+        <!--<item>975,BT,未知</item>-->
+        <item>591,BO,玻利维亚</item>
+        <!--<item>387,BA,</item>-->
+        <item>267,BW,博茨瓦纳</item>
+        <item>55,BR,巴西</item>
+        <item>673,BN,文莱</item>
+        <item>359,BG,保加利亚</item>
+        <item>226,BF,布基纳法索</item>
+        <item>95,MM,缅甸</item>
+        <item>257,BI,布隆迪</item>
+        <item>855,KH,柬埔寨</item>
+        <item>237,CM,喀麦隆</item>
+        <item>1,CA,加拿大</item>
+        <!--<item>238,CV,</item>-->
+        <!--<item>236,CF,</item>-->
+        <item>235,TD,印度尼西亚</item>
+        <item>56,CL,智利</item>
+        <item>86,CN,中国</item>
+        <!--<item>61,CX,</item>-->
+        <!--<item>61,CC,</item>-->
+        <item>57,CO,哥伦比亚</item>
+        <!--<item>269,KM,</item>-->
+        <item>242,CG,刚果</item>
+        <!--<item>243,CD,</item>-->
+        <item>682,CK,库克群岛</item>
+        <item>506,CR,哥斯达黎加</item>
+        <!--<item>385,HR,</item>-->
+        <item>53,CU,古巴</item>
+        <item>357,CY,塞浦路斯</item>
+        <item>420,CZ,捷克</item>
+        <item>45,DK,丹麦</item>
+        <item>253,DJ,吉布提   </item>
+        <!--<item>670,TL,</item>-->
+        <item>593,EC,厄瓜多尔</item>
+        <item>20,EG,埃及</item>
+        <item>503,SV,萨尔瓦多</item>
+        <!--<item>240,GQ,</item>-->
+        <!--<item>291,ER,</item>-->
+        <item>372,EE,爱沙尼亚</item>
+        <item>251,ET,埃塞俄比亚</item>
+        <!--<item>500,FK,</item>-->
+        <!--<item>298,FO,</item>-->
+        <item>679,FJ,斐济</item>
+        <item>358,FI,芬兰</item>
+        <item>33,FR,法国</item>
+        <item>689,PF,法属玻利尼西亚</item>
+        <!--<item>241,GA,</item>-->
+        <item>220,GM,冈比亚</item>
+        <item>995,GE,格鲁吉亚</item>
+        <item>49,DE,德国</item>
+        <item>233,GH,加纳</item>
+        <item>350,GI,直布罗陀</item>
+        <item>30,GR,希腊</item>
+        <!--<item>299,GL,</item>-->
+        <item>502,GT,危地马拉</item>
+        <item>224,GN,几内亚</item>
+        <!--<item>245,GW,</item>-->
+        <!--<item>592,GY,</item>-->
+        <item>509,HT,海地</item>
+        <item>504,HN,洪都拉斯</item>
+        <item>852,HK,香港</item>
+        <item>36,HU,匈牙利</item>
+        <item>91,IN,印度</item>
+        <item>62,ID,印度尼西亚</item>
+        <item>98,IR,伊朗</item>
+        <item>964,IQ,伊拉克</item>
+        <item>353,IE,爱尔兰</item>
+        <!--<item>44,IM,</item>-->
+        <item>972,IL,以色列</item>
+        <item>39,IT,意大利</item>
+        <!--<item>225,CI,</item>-->
+        <item>81,JP,日本</item>
+        <item>962,JO,约旦</item>
+        <item>7,KZ,哈萨克斯坦</item>
+        <item>254,KE,肯尼亚</item>
+        <!--<item>686,KI,</item>-->
+        <!--<item>965,KW,</item>-->
+        <item>996,KG,吉尔吉斯坦</item>
+        <item>856,LA,老挝</item>
+        <item>371,LV,拉脱维亚</item>
+        <item>961,LB,黎巴嫩</item>
+        <item>266,LS,莱索托</item>
+        <item>231,LR,利比里亚</item>
+        <item>218,LY,利比亚</item>
+        <item>423,LI,列支敦士登</item>
+        <item>370,LT,立陶宛</item>
+        <item>352,LU,卢森堡</item>
+        <item>853,MO,澳门</item>
+        <item>389,MK,马其顿文</item>
+        <item>261,MG,马达加斯加</item>
+        <item>265,MW,马拉维</item>
+        <item>60,MY,马来西亚</item>
+        <item>960,MV,马尔代夫</item>
+        <item>223,ML,马里</item>
+        <item>356,MT,马耳他</item>
+        <!--<item>692,MH,</item>-->
+        <!--<item>222,MR,</item>-->
+        <item>230,MU,毛里求斯</item>
+        <!--<item>262,YT,</item>-->
+        <item>52,MX,墨西哥</item>
+        <!--<item>691,FM,</item>-->
+        <item>373,MD,摩尔多瓦</item>
+        <item>377,MC,摩纳哥</item>
+        <item>976,MN,蒙古</item>
+        <!--<item>382,ME,</item>-->
+        <item>212,MA,摩洛哥</item>
+        <item>258,MZ,莫桑比克</item>
+        <item>264,NA,纳米比亚</item>
+        <item>674,NR,瑙鲁</item>
+        <item>977,NP,尼泊尔</item>
+        <item>31,NL,荷兰</item>
+        <!--<item>599,AN,</item>-->
+        <!--<item>687,NC,</item>-->
+        <item>64,NZ,新西兰</item>
+        <item>505,NI,尼加拉瓜</item>
+        <item>227,NE,尼日尔</item>
+        <item>234,NG,尼日利亚</item>
+        <!--<item>683,NU,</item>-->
+        <item>850,KP,朝鲜</item>
+        <item>47,NO,挪威</item>
+        <item>968,OM,阿曼</item>
+        <item>92,PK,巴基斯坦</item>
+        <!--<item>680,PW,</item>-->
+        <item>507,PA,巴拿马</item>
+        <item>675,PG,巴布亚新几内亚</item>
+        <item>595,PY,巴拉圭</item>
+        <item>51,PE,秘鲁</item>
+        <item>63,PH,菲律宾</item>
+        <!--<item>870,PN,</item>-->
+        <item>48,PL,波兰</item>
+        <item>351,PT,葡萄牙</item>
+        <item>1,PR,波多黎各</item>
+        <item>974,QA,卡塔尔</item>
+        <item>40,RO,罗马尼亚</item>
+        <item>7,RU,俄罗斯</item>
+        <!--<item>250,RW,</item>-->
+        <!--<item>590,BL,</item>-->
+        <!--<item>685,WS,</item>-->
+        <item>378,SM,圣马力诺</item>
+        <item>239,ST,圣多美和普林西比</item>
+        <item>966,SA,沙特阿拉伯</item>
+        <item>221,SN,塞内加尔</item>
+        <!--<item>381,RS,</item>-->
+        <!--<item>248,SC,</item>-->
+        <item>232,SL,塞拉利昂</item>
+        <item>65,SG,新加坡</item>
+        <item>421,SK,斯洛伐克</item>
+        <item>386,SI,斯洛文尼亚</item>
+        <item>677,SB,所罗门群岛</item>
+        <item>252,SO,索马里</item>
+        <item>27,ZA,南非</item>
+        <item>82,KR,韩国</item>
+        <item>34,ES,西班牙</item>
+        <item>94,LK,斯里兰卡</item>
+        <item>290,SH,塞波尼斯-克罗地亚文</item>
+        <!--<item>508,PM,</item>-->
+        <item>249,SD,苏丹</item>
+        <item>597,SR,苏里南</item>
+        <item>268,SZ,斯威士兰</item>
+        <item>46,SE,瑞典</item>
+        <item>41,CH,瑞士</item>
+        <item>963,SY,叙利亚</item>
+        <item>886,TW,台湾省</item>
+        <item>992,TJ,塔吉克斯坦</item>
+        <item>255,TZ,坦桑尼亚</item>
+        <item>66,TH,泰国</item>
+        <item>228,TG,多哥</item>
+        <!--<item>690,TK,</item>-->
+        <item>676,TO,汤加</item>
+        <item>216,TN,突尼斯</item>
+        <item>90,TR,土耳其</item>
+        <item>993,TM,土库曼斯坦</item>
+        <!--<item>688,TV,</item>-->
+        <item>971,AE,阿拉伯联合酋长国</item>
+        <item>256,UG,乌干达</item>
+        <item>44,GB,英国</item>
+        <item>380,UA,乌克兰</item>
+        <item>598,UY,乌拉圭</item>
+        <item>1,US,美国</item>
+        <item>998,UZ,乌兹别克斯坦</item>
+        <!--<item>678,VU,</item>-->
+        <!--<item>39,VA,</item>-->
+        <item>58,VE,委内瑞拉</item>
+        <item>84,VN,越南</item>
+        <!--<item>681,WF,</item>-->
+        <item>967,YE,也门</item>
+        <item>260,ZM,赞比亚</item>
+        <item>263,ZW,津巴布韦</item>
+    </string-array>
+
+    <string name="update">更新</string>
+    <string name="cancel">取消</string>
+    <string name="update_version">更新版本</string>
+    <string name="new_version">最新版本:</string>
+</resources>

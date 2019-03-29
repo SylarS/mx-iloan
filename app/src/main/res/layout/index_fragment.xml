@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue_txt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="29dp"
+            android:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/imgv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="82dp"
+            android:background="@drawable/help" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="63dp"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgv_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/news" />
+    </RelativeLayout>
+
+ <com.panshi.hujin2.iloan.view.VerticalSwiprRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_toolbar"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/translate"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/translate"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="218dp"
+                        android:background="@color/blue_txt"
+                        >
+
+                        <TextView
+                            android:id="@+id/head_tile"
+                            style="@style/monto_xiao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="33dp"
+                            android:text="@string/payment_amout"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:id="@+id/tv_amout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/head_tile"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="17dp"
+                            android:text="3000.00"
+                            android:textColor="@color/eef1f6"
+                            android:textSize="32sp" />
+                        <TextView
+                            android:id="@+id/tv_loan_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_amout"
+                            android:layout_marginLeft="14dp"
+                            style="@style/loan_day"
+                            android:layout_alignBaseline="@+id/tv_amout"
+                            android:text="@string/days"
+                            />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/tv_amout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal">
+                             <RelativeLayout
+                                 android:id="@+id/rl_head_bg"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:background="@drawable/index_head_bg">
+                                 <TextView
+                                     android:id="@+id/tv_jie_info"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_centerHorizontal="true"
+                                     android:layout_marginTop="@dimen/phone_num_height"
+                                     android:text="11111111111111"
+                                     android:textColor="@color/white"
+                                     android:textSize="11sp" />
+                             </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_jiekuan"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:background="@color/white"
+                        android:visibility="visible"
+                        android:elevation="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_jie_acount"
+                            style="@style/cantidad_de_pr_stamo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/jie_amout" />
+
+                        <TextView
+                            android:id="@+id/tv_jie_note"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_jie_acount"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/jie_note" />
+
+                        <com.panshi.hujin2.iloan.view.widget.SeekBar
+                            android:id="@+id/seek_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/tv_jie_note"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="19dp"
+                            android:layout_marginTop="8dp"
+                            app:ssb_show_progress_in_float="false"
+                            app:ssb_show_section_mark="false"
+                            app:ssb_show_section_text="true"
+                            app:ssb_show_sign="true"
+                            app:ssb_show_thumb_text="false"
+                            app:ssb_sign_arrow_height="3dp"
+                            app:ssb_sign_arrow_width="8dp"
+                            app:ssb_sign_border_color="@color/white"
+                            app:ssb_sign_border_size="1dp"
+                            app:ssb_sign_color="@color/blue_txt"
+                            app:ssb_sign_show_border="true" />
+
+                        <TextView
+                            android:id="@+id/tv_day"
+                            style="@style/cantidad_de_pr_stamo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seek_bar"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/jie_date" />
+
+                        <com.panshi.hujin2.iloan.view.widget.SeekBarDay
+                            android:id="@+id/seek_bar_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/tv_day"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="19dp"
+                            android:layout_marginTop="8dp"
+                            app:ssb_section_text_position="sides"
+                            app:ssb_show_progress_in_float="false"
+                            app:ssb_show_section_mark="false"
+                            app:ssb_show_section_text="true"
+                            app:ssb_show_sign="true"
+                            app:ssb_show_thumb_text="false"
+                            app:ssb_sign_arrow_height="3dp"
+                            app:ssb_sign_arrow_width="8dp"
+                            app:ssb_sign_border_color="@color/white"
+                            app:ssb_sign_border_size="1dp"
+                            app:ssb_sign_color="@color/blue_txt"
+                            app:ssb_sign_show_border="true" />
+                        <RelativeLayout
+                            android:id="@+id/rl_lilv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seek_bar_day"
+                            android:layout_marginTop="16dp">
+                            <TextView
+                                android:id="@+id/tv_tv_lilv_year1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="19dp"
+                                android:text="@string/jie_lilv_year"
+                                android:textColor="@color/gray_acacac"
+                                android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_tv_lilv_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/tv_tv_lilv_year1"
+                                android:textColor="@color/orange_txt"
+                                android:textSize="13sp"
+                                android:layout_alignBaseline="@+id/tv_tv_lilv_year1"
+                                />
+                            <TextView
+                                android:id="@+id/tv_cat1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_tv_lilv_year1"
+                                android:layout_marginTop="3dp"
+                                android:layout_alignLeft="@+id/tv_tv_lilv_year1"
+                                android:textColor="@color/gray_acacac"
+                                android:textSize="11sp"
+                                android:text="@string/jie_lilv_avager"
+                                />
+                            <TextView
+                                android:id="@+id/tv_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_tv_lilv_year1"
+                                android:layout_toRightOf="@+id/tv_cat1"
+                                android:layout_alignBottom="@+id/tv_cat1"
+                                android:layout_alignBaseline="@+id/tv_cat1"
+                                android:layout_marginLeft="3dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/orange_txt"
+                                android:text=""
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tv_cat"
+                                android:layout_below="@+id/tv_tv_lilv_year"
+                                android:layout_alignBaseline="@+id/tv_cat"
+                                android:layout_alignBottom="@+id/tv_cat"
+                                android:textSize="11sp"
+                                android:textColor="@color/gray_acacac"
+                                android:text="@string/jie_lilv_avager_note"
+                                />
+
+                        </RelativeLayout>
+                        <Button
+                            android:id="@+id/btn_jie"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_below="@+id/rl_lilv"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/buttun_index_shape"
+                            android:text="@string/jiekuan_fast"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_reviewing"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:background="@color/white"
+                        android:elevation="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_shehe_avail"
+                            style="@style/ya_es_la_ltima_versi_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="46dp"
+                            android:text="@string/amout_applay" />
+
+                        <TextView
+                            android:id="@+id/tv_shenhe_cash_amout"
+                            style="@style/withcash_amount_avail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_shehe_avail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="200000" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_shenhe_lilv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_shenhe_cash_amout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="19dp">
+
+                            <TextView
+                                android:id="@+id/tv_shenhe_lilv_note"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/jiekuan_lvlu" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_shenhe_lilv_value_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/tv_shenhe_lilv_note">
+
+                                <TextView
+                                    android:id="@+id/tv_shenhe_lilv_value_old"
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.70%" />
+
+                                <View
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="40dp"
+                                    android:layout_height="1dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="#acacac" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_shenhe_lilv_value"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/rl_shenhe_lilv_value_old"
+                                android:text="0.1%"
+                                android:textColor="@color/orange_txt" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_reviewing"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_shenhe_lilv"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="28dp"
+                            android:gravity="center"
+                            android:text="@string/shen_he_time" />
+
+                        <Button
+                            android:id="@+id/btn_reviewing"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="38dp"
+                            android:background="@drawable/regit_shape"
+                            android:text="@string/reviewing"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:layout_below="@+id/tv_reviewing"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_review_refuse"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:background="@color/white"
+                        android:elevation="5dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_refuse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="74dp"
+                            android:background="@drawable/review_refuse" />
+
+                        <TextView
+                            android:id="@+id/tv_refuse"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_refuse"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="28dp"
+                            android:gravity="center"
+                            android:text="@string/review_refuse_note" />
+
+                        <Button
+                            android:id="@+id/btn_refuse"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_below="@+id/tv_refuse"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/buttun_index_shape"
+                            android:text="@string/review_refuse"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_repayement_failture"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:background="@color/white"
+                        android:elevation="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_reapyment_avail"
+                            style="@style/ya_es_la_ltima_versi_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="46dp"
+                            android:text="@string/payment_amout" />
+
+                        <TextView
+                            android:id="@+id/repayment_cash_amout"
+                            style="@style/withcash_amount_avail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_reapyment_avail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="200000" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_pay_lilv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/repayment_cash_amout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="19dp">
+
+                            <TextView
+                                android:id="@+id/tv_pay_lilv_note"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/jiekuan_lvlu" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_pay_lilv_value_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/tv_pay_lilv_note">
+
+                                <TextView
+                                    android:id="@+id/tv_pay_lilv_value_old"
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.125%" />
+
+                                <View
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="40dp"
+                                    android:layout_height="1dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="#acacac" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_pay_lilv_value"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/rl_pay_lilv_value_old"
+                                android:text="0.1%"
+                                android:textColor="@color/orange_txt" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/tv_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_pay_lilv"
+                            android:layout_marginTop="25dp"
+                            android:gravity="center"
+                            android:textColor="#fb7c3e"
+                            android:text="@string/repyment_tishi_failture"
+                            />
+                        <Button
+                            android:id="@+id/btn_payfailture"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="37dp"
+                            android:layout_marginTop="19dp"
+                            android:background="@drawable/buttun_index_shape"
+                            android:text="@string/review_refuse"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_re_payment"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/index_bg_shape"
+                        android:elevation="5dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_repay_bankName1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="20dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_bank_name" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_bankName"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:layout_alignBottom="@+id/tv_repay_bankName1"
+                            android:layout_alignBaseline="@+id/tv_repay_bankName1"
+
+                            android:text="@string/return_bank_name" />
+                        <TextView
+                            android:id="@+id/tv_repay_accout1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_repay_bankName"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/return_account" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_accout"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_repay_accout1"
+                            android:layout_alignBaseline="@+id/tv_repay_accout1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_account" />
+                        <TextView
+                            android:id="@+id/tv_repay_eletri_accout1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_repay_accout1"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/return_eletric_account" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_eletri_accout"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_repay_eletri_accout1"
+                            android:layout_alignBaseline="@+id/tv_repay_eletri_accout1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_eletric_account" />
+                        <TextView
+                            android:id="@+id/tv_repay_code1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_repay_eletri_accout1"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="6dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_code" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_code"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_repay_code1"
+                            android:layout_alignBaseline="@+id/tv_repay_code1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_code" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_date1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_repay_code"
+                            android:layout_marginLeft="25dp"
+                            android:textSize="13sp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/return_date" />
+
+                        <TextView
+                            android:id="@+id/tv_repay_date"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_repay_date1"
+                            android:layout_alignBottom="@+id/tv_repay_date1"
+                            android:layout_alignBaseline="@+id/tv_repay_date1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_date" />
+                        <TextView
+                            android:id="@+id/tv_line"
+                            android:layout_width="281dp"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:background="#d3d3d3"
+                            android:layout_below="@+id/tv_repay_date"/>
+                        <TextView
+                            android:id="@+id/amout_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_line"
+                            android:layout_marginTop="15dp"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="25dp"
+                            android:textColor="@color/binder_txt"
+                            android:textStyle="bold"
+                            android:text="@string/amout_repayment"
+                            />
+                        <TextView
+                            android:id="@+id/tv_pay_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/amout_note"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="25dp"
+                            android:textColor="@color/orange_txt"
+                            android:textSize="20sp"
+                            />
+                        <TextView
+                            android:id="@+id/tv_jie_day_rate"
+                            style="@style/index_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_pay_amount"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_acacac"
+                            android:text="@string/due_jie_date_rate" />
+                        <Button
+                            android:id="@+id/btn_repayment"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/buttun_index_shape"
+                            android:text="@string/repay_day_btn"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="14dp"
+                            android:layout_below="@+id/tv_jie_day_rate"
+                            android:layout_centerHorizontal="true"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_due_date"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:background="@drawable/index_bg_shape"
+                        android:elevation="5dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/tv_return_bankName1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="20dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_bank_name" />
+
+                        <TextView
+                            android:id="@+id/tv_return_bankName"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_return_bankName1"
+                            android:layout_alignBaseline="@+id/tv_return_bankName1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_bank_name" />
+                        <TextView
+                            android:id="@+id/tv_return_accout1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_below="@+id/tv_return_bankName"
+                            android:textSize="13sp"
+                            android:text="@string/return_account" />
+
+                        <TextView
+                            android:id="@+id/tv_return_accout"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_return_accout1"
+                            android:layout_alignBaseline="@+id/tv_return_accout1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_account" />
+                        <TextView
+                            android:id="@+id/tv_return_eletric_accout1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_below="@+id/tv_return_accout1"
+                            android:textSize="13sp"
+                            android:text="@string/return_eletric_account" />
+
+                        <TextView
+                            android:id="@+id/tv_return_eletric_accout"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_return_eletric_accout1"
+                            android:layout_alignBaseline="@+id/tv_return_eletric_accout1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_eletric_account" />
+                        <TextView
+                            android:id="@+id/tv_return_code1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_return_eletric_accout1"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/return_code" />
+
+                        <TextView
+                            android:id="@+id/tv_return_code"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_return_code1"
+                            android:textSize="13sp"
+                            android:layout_alignBottom="@+id/tv_return_code1"
+                            android:layout_alignBaseline="@+id/tv_return_code1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:text="@string/return_code" />
+
+                        <TextView
+                            android:id="@+id/tv_return_date1"
+                            style="@style/foget_contrase_a_de_pago"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_return_code"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="6dp"
+                            android:textSize="13sp"
+                            android:text="@string/return_date" />
+
+                        <TextView
+                            android:id="@+id/tv_return_date"
+                            style="@style/index_text_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_return_date1"
+                            android:textSize="13sp"
+                            android:layout_alignBottom="@+id/tv_return_date1"
+                            android:layout_alignBaseline="@+id/tv_return_date1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:text="@string/return_date" />
+                        <TextView
+                            android:id="@+id/tv_line_due"
+                            android:layout_width="281dp"
+                            android:layout_height="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:background="#d3d3d3"
+                            android:layout_below="@+id/tv_return_date"/>
+                        <TextView
+                            android:id="@+id/amout_note_due"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_line_due"
+                            android:layout_marginTop="15dp"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="25dp"
+                            android:textColor="@color/binder_txt"
+                            android:textStyle="bold"
+                            android:text="@string/amout_repayment"
+                            />
+                        <TextView
+                            android:id="@+id/tv_pay_amount_due"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/amout_note_due"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="25dp"
+                            android:textColor="@color/due_fb7c3e"
+                            android:textSize="20sp"
+                            />
+                        <TextView
+                            android:id="@+id/tv_day_rate"
+                            style="@style/index_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_pay_amount_due"
+                            android:layout_marginLeft="25dp"
+                            android:textSize="13sp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/gray_acacac"
+                            android:text="@string/due_date_rate" />
+
+                        <Button
+                            android:id="@+id/btn_due"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="14dp"
+                            android:text="@string/due_day_btn"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/btn_due_date_shape"
+                            android:layout_below="@+id/tv_day_rate"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_withcash"
+                        android:layout_width="335dp"
+                        android:layout_height="323dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/banner_height"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_avail"
+                            style="@style/ya_es_la_ltima_versi_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="46dp"
+                            android:text="@string/amout_withdraw" />
+
+                        <TextView
+                            android:id="@+id/withdraw_cash_amout"
+                            style="@style/withcash_amount_avail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_withdraw_avail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="200000" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/withdraw_cash_amout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="19dp">
+
+                            <TextView
+                                android:id="@+id/tv_lilv_note"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/jiekuan_lvlu" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_lilv_value_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/tv_lilv_note">
+
+                                <TextView
+                                    android:id="@+id/tv_lilv_value_old"
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.70%" />
+
+                                <View
+                                    style="@style/ya_es_la_ltima_versi_n"
+                                    android:layout_width="40dp"
+                                    android:layout_height="1dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="#acacac" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_lilv_value"
+                                style="@style/ya_es_la_ltima_versi_n"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@+id/rl_lilv_value_old"
+                                android:textColor="@color/orange_txt" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_withdraw"
+                            android:layout_width="301dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="37dp"
+                            android:layout_marginTop="19dp"
+                            android:background="@drawable/buttun_index_shape"
+                            android:text="@string/withdraw_cash"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </com.panshi.hujin2.iloan.view.VerticalSwiprRefreshLayout>
+
+</RelativeLayout>

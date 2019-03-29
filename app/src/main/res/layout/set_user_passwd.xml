@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+    <include layout="@layout/include_title"/>
+    <TextView
+        android:id="@+id/tv_passwd_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/passwd_rule"
+        android:textColor="@color/binder_txt"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_passwd_rule1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/passwd_rule1"
+        android:textColor="@color/orange_txt"
+        android:textSize="13sp" />
+
+    <TextView
+        style="@style/binder_txt_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/input_passwd" />
+
+    <EditText
+        android:id="@+id/edit_passwd"
+        style="@style/introducir"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="21dp"
+        android:inputType="textPassword"
+        android:background="@drawable/set_passwd_shape"
+        android:hint="@string/input_passwd" />
+
+
+    <TextView
+        style="@style/binder_txt_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/re_input_passwd" />
+
+    <EditText
+        android:id="@+id/edit_re_passwd"
+        style="@style/introducir"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="21dp"
+        android:inputType="textPassword"
+        android:hint="@string/re_input_passwd"
+        android:background="@drawable/set_passwd_shape" />
+
+    <Button
+        android:id="@+id/btn_confir"
+        android:layout_width="336dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="27dp"
+        style="@style/btn_gray_style"
+        android:text="@string/btn_sure"
+      />
+</LinearLayout>
